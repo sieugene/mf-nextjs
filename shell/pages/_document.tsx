@@ -6,8 +6,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    console.log("tyt", process.env.HOST_SERVICE_APP1);
-
     return (
       <Html>
         <script

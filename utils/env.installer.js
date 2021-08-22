@@ -5,10 +5,11 @@ module.exports = {
   EnvInstaller: (process) => {
     const APP_ENV =
       process.env.APP_ENV === "development" ? "development" : "production";
-    if (process.env.APP_ENV === "development") {
-      return { APP_ENV, ...envDev };
-    } else {
-      return { APP_ENV, ...envProd };
-    }
+
+    // if (APP_ENV === "development") {
+    //   return { APP_ENV, ...envDev };
+    // } else {
+    return { APP_ENV, ...envProd };
+    // }
   },
 };
