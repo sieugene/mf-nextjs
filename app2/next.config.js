@@ -1,12 +1,13 @@
 const { withModuleFederation } = require("@module-federation/nextjs-mf");
 const { EnvInstaller } = require("../utils/env.installer");
+const env = EnvInstaller(process);
 
 module.exports = {
   future: { webpack5: true },
   images: {
     domains: ["upload.wikimedia.org"],
   },
-  env: EnvInstaller(process),
+  env,
   webpack: (config, options) => {
     const { isServer } = options;
     const mfConf = {
@@ -25,7 +26,7 @@ module.exports = {
     config.cache = false;
     withModuleFederation(config, options, mfConf);
     if (!isServer) {
-      config.output.publicPath = `${process.env.HOST_SERVICE_APP2}/_next/`;
+      config.output.publicPath = `${env.HOST_SERVICE_APP2}/_next/`;
     }
 
     return config;
