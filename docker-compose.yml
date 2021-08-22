@@ -1,0 +1,32 @@
+version: "3.5"
+
+networks:
+  net:
+    driver: overlay
+    attachable: true
+
+services:
+  app1:
+    container_name: app1
+    build:
+      context: "./app1"
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+  app2:
+    container_name: app2
+    build:
+      context: "./app2"
+      dockerfile: Dockerfile
+    ports:
+      - 3002:3002
+  shell:
+    container_name: shell
+    depends_on:
+      - app1
+      - app2
+    build:
+      context: "./shell"
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
