@@ -1,11 +1,11 @@
-const {
-  withModuleFederation,
-} = require("@module-federation/nextjs-mf");
+const { withModuleFederation } = require("@module-federation/nextjs-mf");
+const { EnvInstaller } = require("../utils/env.installer.js");
 
 module.exports = {
   future: { webpack5: true },
+  env: EnvInstaller(process),
   images: {
-    domains: ['upload.wikimedia.org'],
+    domains: ["upload.wikimedia.org"],
   },
   webpack: (config, options) => {
     const mfConf = {
@@ -16,10 +16,9 @@ module.exports = {
       },
       remotes: {
         app1: "app1",
-        app2: "app2", 
+        app2: "app2",
       },
-      exposes: {
-      },
+      exposes: {},
     };
     config.cache = false;
     withModuleFederation(config, options, mfConf);

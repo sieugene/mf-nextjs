@@ -6,10 +6,16 @@ class MyDocument extends Document {
   }
 
   render() {
+    console.log("tyt", process.env.HOST_SERVICE_APP1);
+
     return (
       <Html>
-        <script src="http://localhost:3001/_next/static/runtime/app1RemoteEntry.js" />
-        <script src="http://localhost:3002/_next/static/runtime/app2RemoteEntry.js" />
+        <script
+          src={`${process.env.HOST_SERVICE_APP1}/_next/static/runtime/app1RemoteEntry.js`}
+        />
+        <script
+          src={`${process.env.HOST_SERVICE_APP2}/_next/static/runtime/app2RemoteEntry.js`}
+        />
         <Head />
         <body>
           <Main />
