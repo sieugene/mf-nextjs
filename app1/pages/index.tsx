@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Cube from '../components/cube'
 import styles from '../styles/Home.module.css'
+import React from "react"
 
 
 export default function Home() {

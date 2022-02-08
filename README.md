@@ -1,9 +1,16 @@
 
 The repository was taken as a basis [mf-nextjs](https://github.com/schalela/mf-nextjs "mf-nextjs")
 
+
 ### Description 
 I have expanded this example based on the original. 
 Adding dockerization, typescript, env.
+
+> **About the recent update**   
+Added SSR support, but only in dev mode, 
+no idea why it doesn't work in production.
+
+------------
 
 > **About Types**   
 In our shell, types are declared as global. In a certain interpretation, if we use it as a non-monorepository, we would keep each service in separate repositories, this file of global types would be a binder that would share common types. For example, these types could be separated into a separate package as npm.
