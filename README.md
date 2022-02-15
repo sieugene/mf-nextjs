@@ -7,8 +7,7 @@ I have expanded this example based on the original.
 Adding dockerization, typescript, env.
 
 > **About the recent update**   
-Added SSR support, but only in dev mode, 
-no idea why it doesn't work in production.
+Added SSR support, fixed work in production mode, more details in utils/appConnector.js.
 
 ------------
 
