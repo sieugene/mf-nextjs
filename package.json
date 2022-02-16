@@ -8,6 +8,7 @@
     "postinstall": "concurrently \"cd app1; yarn\" \"cd app2; yarn\" \"cd shell; yarn\""
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "concurrently": "^5.2.0"
   }
 }
