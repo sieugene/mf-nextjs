@@ -1,5 +1,5 @@
-const path = require("path");
-const appRoot = require("app-root-path");
+const { dirname } = require('path');
+const appRoot = dirname(require.main.filename);
 
 module.exports = {
   /**
@@ -16,7 +16,7 @@ module.exports = {
       const paths = `${appRoot}/${name}/.next/server/${
         isBuild ? "chunks/static" : "static"
       }/runtime/${entry}.js`;
-
+      console.log(paths)
       return paths;
     } else {
       return name;
