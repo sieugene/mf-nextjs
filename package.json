@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "concurrently \"cd app1; yarn dev \" \"cd app2; yarn dev\" \"cd shell; yarn dev \"",
+    "dev": "concurrently \"cd app1; yarn dev \" \"cd app2; yarn dev\" \"cd shell; yarn dev \"",
     "build": "concurrently \"cd app1; yarn build \" \"cd app2; yarn build\" \"cd shell; yarn build \"",
-    "serve": "concurrently \"cd app1; yarn start \" \"cd app2; yarn start\" \"cd shell; yarn start \"",
+    "start": "concurrently \"cd app1; yarn start \" \"cd app2; yarn start\" \"cd shell; yarn start \"",
     "lint": "concurrently \"cd app1; yarn tsc \" \"cd app2; yarn tsc\" \"cd shell; yarn tsc \"",
     "postinstall": "concurrently \"cd app1; yarn; yarn build\" \"cd app2; yarn; yarn build\" \"cd shell; yarn; yarn build\""
   },
