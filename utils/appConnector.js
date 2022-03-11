@@ -1,4 +1,4 @@
-const { dirname } = require('path');
+const { dirname } = require("path");
 const appRoot = dirname(require.main.filename);
 
 module.exports = {
@@ -13,11 +13,14 @@ module.exports = {
    */
   appConnector(name, entry, isServer, isBuild) {
     if (isServer) {
-      const paths = `${appRoot}/${name}/.next/server/${
-        isBuild ? "chunks/static" : "static"
-      }/runtime/${entry}.js`;
-      console.log(paths)
-      return paths;
+      const appPath = path.resolve(
+        __dirname,
+        `../${name}/.next/server/${
+          isBuild ? "chunks/static" : "static"
+        }/runtime/${entry}.js`
+      );
+      console.log(appPath, "------ app -----");
+      return appPath;
     } else {
       return name;
     }
