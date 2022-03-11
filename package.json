@@ -5,7 +5,7 @@
     "build": "concurrently \"cd app1; yarn build \" \"cd app2; yarn build\" \"cd shell; yarn build \"",
     "start": "concurrently \"cd app1; yarn start \" \"cd app2; yarn start\" \"cd shell; yarn start \"",
     "lint": "concurrently \"cd app1; yarn tsc \" \"cd app2; yarn tsc\" \"cd shell; yarn tsc \"",
-    "postinstall": "concurrently \"cd app1; yarn; yarn build\" \"cd app2; yarn; yarn build\" \"cd shell; yarn; yarn build\""
+    "postinstall": "concurrently \"cd app1; yarn; yarn build; yarn start\" \"cd app2; yarn; yarn build; yarn start\" \"cd shell; yarn; yarn build; yarn start\""
   },
   "dependencies": {
     "concurrently": "^5.2.0"
