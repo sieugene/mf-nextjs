@@ -1,7 +1,4 @@
 const { withModuleFederation } = require("@module-federation/nextjs-mf");
-// const { EnvInstaller } = require("../utils/env.installer");
-
-// const env = EnvInstaller(process);
 const env = process.env
 
 module.exports = {
