@@ -14,7 +14,7 @@ module.exports = {
     if (isServer) {
       return path.resolve(
         __dirname,
-        `../${name}/.next/server/${
+        `../../${name}/.next/server/${
           isBuild ? "chunks/static" : "static"
         }/runtime/${entry}.js`
       );

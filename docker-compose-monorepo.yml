@@ -1,0 +1,15 @@
+version: "3.5"
+
+networks:
+  net:
+    driver: overlay
+    attachable: true
+
+services:
+  monorepo:
+    container_name: monorepo-mfnextjs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

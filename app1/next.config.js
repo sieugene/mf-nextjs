@@ -1,14 +1,14 @@
 const { withModuleFederation } = require("@module-federation/nextjs-mf");
-const { EnvInstaller } = require("../utils/env.installer");
+// const { EnvInstaller } = require("../utils/env.installer");
 
-const env = EnvInstaller(process);
+// const env = EnvInstaller(process);
+const env = process.env
 
 module.exports = {
   future: { webpack5: true },
   images: {
     domains: ["upload.wikimedia.org"],
   },
-  env,
   webpack: (config, options) => {
     const { isServer } = options;
     const mfConf = {

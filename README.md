@@ -6,19 +6,9 @@ The repository was taken as a basis [mf-nextjs](https://github.com/schalela/mf-n
 I have expanded this example based on the original. 
 Adding dockerization, typescript, env.
 
-> **About the recent update**   
-Added SSR support, fixed work in production mode, more details in utils/appConnector.js.
+# About the recent update
+Now the readme is not updated and the code is being updated, follow the changes on commits! If you want to start a project, use dokcer-compose-monorepo, this is a stable build that allows you to use SSR
 
-------------
-
-> **About Types**   
-In our shell, types are declared as global. In a certain interpretation, if we use it as a non-monorepository, we would keep each service in separate repositories, this file of global types would be a binder that would share common types. For example, these types could be separated into a separate package as npm.
-
-------------
-
-
-> **About dockerization**    
-I have created for each dockerfile service they are equivalent to each. And there was also the creation of docker-compose which runs all the services together.
 
 ### Development
 ### 1. Install project dependencies
@@ -42,6 +32,8 @@ Being in the project directory, execute in the console:
 
 
 ------------
+
+(deprecated commands, wait updates)
 
 ### Build
 ### 1. Run build
